@@ -1,0 +1,4 @@
+<p>list works!</p>
+<div *ngFor="let item of items; index as i" [routerLink]="['/more-pictures', item.name]">
+    <img [src]="item.picture">
+</div>
