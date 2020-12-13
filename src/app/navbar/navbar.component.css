@@ -31,3 +31,10 @@
 .blue {
   background-color:  blue;
 }
+
+.inverted {
+	filter: invert(100%);
+}
+.normal {
+	filter: invert(0%);
+}

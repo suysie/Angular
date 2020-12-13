@@ -8,6 +8,7 @@ import { SettingsService } from '../settings.service';
 })
 export class SettingsComponent implements OnInit {
 
+  inverted: boolean =false;
   constructor(private  settingsService: SettingsService) { }
   
 onClickBlue(){
@@ -19,6 +20,16 @@ onClickWhite(){
 onClickPink(){
   this.settingsService.setTheme('pink')
 };
+setInverted(value){
+  if(value)
+  {
+    this.settingsService.setInverted('inverted')
+  }
+  else{
+    this.settingsService.setInverted('normal')
+  }
+  
+}
 
   ngOnInit(): void {
   }

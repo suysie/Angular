@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SettingsComponent } from './settings/settings.component';
 import { ApiService } from './api.services';
 import { SettingsService } from './settings.service';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { SettingsService } from './settings.service';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatCheckboxModule,
     HttpClientModule
   ],
   providers: [ApiService, SettingsService],

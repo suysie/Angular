@@ -3,3 +3,5 @@
 <button (click)="onClickWhite()" mat-raised-button>White</button>
 <button (click)="onClickPink()" mat-raised-button color="accent">Pink</button>
 <button (click)="onClickBlue()" mat-raised-button color="primary">Blue</button>
+<br>
+<mat-checkbox #checkbox (change)="setInverted(checkbox.checked)" class="example-margin" [checked]="inverted">invert colors</mat-checkbox>

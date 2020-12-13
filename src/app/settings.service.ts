@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SettingsService {
     private theme =  new BehaviorSubject<string>('white')
+    private inverted = new BehaviorSubject<string>('normal')
 
     constructor() {
 
@@ -17,6 +18,14 @@ export class SettingsService {
 
     getTheme(){
         return this.theme.asObservable()
+    }
+
+    setInverted(theme: string){
+        this.inverted.next(theme)
+    }
+
+    getInverted(){
+        return this.inverted.asObservable()
     }
 
 }

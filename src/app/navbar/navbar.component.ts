@@ -12,6 +12,7 @@ import { SettingsService } from '../settings.service';
 export class NavbarComponent {
 
   theme: string = ''
+  inverted: string = ''
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -22,6 +23,8 @@ export class NavbarComponent {
   constructor(private breakpointObserver: BreakpointObserver, private settingsService: SettingsService) {
     this.settingsService.getTheme()
     .subscribe(theme => this.theme = theme)
+    this.settingsService.getInverted()
+    .subscribe(inverted => this.inverted = inverted)
   }
 
 }
