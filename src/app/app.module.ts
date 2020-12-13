@@ -19,6 +19,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { ApiService } from './api.services';
 import { SettingsService } from './settings.service';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatIconModule,
     MatListModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ApiService, SettingsService],
   bootstrap: [AppComponent]
